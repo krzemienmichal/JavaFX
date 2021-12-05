@@ -195,10 +195,10 @@ public class SubjectsViewController implements Initializable{
     @FXML
     public void backToStudentsList(ActionEvent event)throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(MainController.class.getResource("main-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainController.class.getResource("login-view.fxml"));
             root = loader.load();
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root,786, 448);
+            scene = new Scene(root,294, 164);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {

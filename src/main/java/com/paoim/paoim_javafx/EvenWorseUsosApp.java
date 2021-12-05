@@ -15,8 +15,8 @@ public class EvenWorseUsosApp extends Application {
     public void start(Stage stage) throws IOException {
         GenerateData.generate();
 //        System.out.println(Arrays.toString(GenerateData.getSubjectContainer().getSubjects().keySet().stream().toArray()));
-        FXMLLoader fxmlLoader = new FXMLLoader(EvenWorseUsosApp.class.getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 786, 448);
+        FXMLLoader fxmlLoader = new FXMLLoader(EvenWorseUsosApp.class.getResource("login-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 294, 164);
         stage.setResizable(false);
         stage.setTitle("EvenWorseUSOS!");
         stage.setScene(scene);

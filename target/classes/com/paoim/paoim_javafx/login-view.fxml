@@ -3,8 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<GridPane alignment="CENTER" prefHeight="164.0" prefWidth="294.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paoim.paoim_javafx.LoginView">
+<GridPane alignment="CENTER" prefHeight="164.0" prefWidth="294.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paoim.paoim_javafx.LoginController">
   <columnConstraints>
     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -17,9 +16,9 @@
    <children>
       <Label text="First Name" />
       <Label text="Last Name" GridPane.rowIndex="1" />
-      <TextField GridPane.columnIndex="1" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="Sign In" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="firsNameTF" GridPane.columnIndex="1" />
+      <TextField fx:id="lastNameTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="logInButton" mnemonicParsing="false" onAction="#loginClick" text="Sign In" GridPane.rowIndex="2" />
+      <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClick" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
    </children>
 </GridPane>
