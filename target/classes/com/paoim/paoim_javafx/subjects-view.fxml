@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="448.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paoim.paoim_javafx.SubjectsViewController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="786.0" spacing="5.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#signInToSubject" text="Sign In To Subject" />
+            <Button mnemonicParsing="false" onAction="#singOutFromSubject" text="Sign Out From Subject" />
+            <Button mnemonicParsing="false" text="Change Group" onAction="#changeGroup"/>
+            <Button mnemonicParsing="false" onAction="#backToStudentsList" text="Back" />
+         </children>
+        </HBox>
+        <Separator layoutY="46.0" prefHeight="1.0" prefWidth="786.0" />
+        <ListView fx:id="subjectsList" layoutY="48.0" prefHeight="400.0" prefWidth="175.0" />
+        <Separator layoutX="173.0" layoutY="40.0" orientation="VERTICAL" prefHeight="408.0" prefWidth="4.0" />
+        <TableView fx:id="subjectInfoTableView" layoutX="176.0" layoutY="48.0" prefHeight="400.0" prefWidth="610.0">
+            <columns>
+                <TableColumn fx:id="studentStatusColumn" prefWidth="75.0" text="Status" />
+                <TableColumn fx:id="gradesColumn" prefWidth="75.0" text="Grades">
+               <columns>
+                  <TableColumn fx:id="allGradesColumn" prefWidth="75.0" text="Grades" />
+                  <TableColumn fx:id="averageGradeColumn" prefWidth="75.0" text="Average" />
+               </columns></TableColumn>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+      <TableView fx:id="allSubjectView" layoutX="176.0" layoutY="48.0" prefHeight="400.0" prefWidth="610.0">
+         <columns>
+            <TableColumn fx:id="allSubjectSubjectName" prefWidth="75.0" text="Subject" />
+            <TableColumn fx:id="allSubjectStudentStatusColumn" prefWidth="75.0" text="Status" />
+            <TableColumn fx:id="allSubjectGradesColumn" prefWidth="75.0" text="Grades">
+               <columns>
+                  <TableColumn fx:id="allSubjectAllGradesColumn" prefWidth="75.0" text="Grades" />
+                  <TableColumn fx:id="allSubjectAverageGradeColumn" prefWidth="75.0" text="Average" />
+               </columns>
+            </TableColumn>
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+    </children>
+</AnchorPane>
